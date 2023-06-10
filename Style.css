@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #050505;
+}
+.cube
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+} 
+.cube div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+.cube div span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515,#00EC00);
+    transform: rotateY(calc(90deg * var(--i)))translateZ(200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+.cube div span h2
+{
+    position: absolute;
+    font-size: 15em;
+    color: #FFF;
+    transform: rotateZ(20px);
+}
+.cube div span h2:nth-child(1)
+{
+    transform: translateZ(0px) translateY(50px) translatex(0px);
+    color: rgba(0, 0, 0, 0.2);
+    filter: blur(5px);
+}
+.top
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: #343232;
+    transform: rotateX(90deg) translateZ(199px);
+}
+.top::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: #0F0;
+    transform: translateZ(-400px);
+    filter: blur(20px);
+    box-shadow: 
+    0 0 100px rgba(0, 255, 0, 0.1),
+    0 0 200px rgba(0, 255, 0, 0.2),
+    0 0 300px rgba(12, 196, 12, 0.3),
+    0 0 400px rgba(9, 235, 9, 0.7),
+    0 0 500px rgb(43, 255, 0);
+}
