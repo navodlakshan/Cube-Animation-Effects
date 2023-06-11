@@ -1,2 +1,2 @@
 # Cube-Animation-Effects
-![image](https://github.com/navodlakshan/Cube-Animation-Effects/assets/127730980/a2eebe04-6fb3-412b-82e9-a56ef543b369)
+![image](https://github.com/navodlakshan/Cube-Animation-Effects/assets/127730980/f34b985a-f20a-4603-8378-cc33019dd5a5)
